@@ -7,10 +7,13 @@ app.use(express.static(publicP));
 
 
 app.get("/",(req,res)=>{
-    res.send(" MERCADO LIBRE");
+    res.sendFile(path.resolve(__dirname,"./views/home.html"));
 });
-app.get("/products",(req,res)=>{
-    res.sendFile(path.resolve(__dirname,"./views/homecopia.html"));
+app.get("/",(req,res)=>{
+    res.sendFile(path.resolve(__dirname,"./views/home.html"));
+});
+app.get("/register",(req,res)=>{
+    res.sendFile(path.resolve(__dirname,"./views/register.html"));
 });
 app.get("/home",(req,res)=>{
     res.sendFile(path.resolve(__dirname,"./views/home.html"));
