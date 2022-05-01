@@ -49,13 +49,13 @@ p{
 }
 div.top-header{
     padding: 5%;
-display: flex;
-justify-content: space-between;
-align-items: center;}
+    display: flex;
+    justify-content: space-between;
+    align-items: center;}
 
 header{
     
-    background-color:yellow;
+    background-color:rgba(255, 225, 0, 0.837);
     z-index: 1000;
     width: 100%;
 
@@ -110,21 +110,12 @@ header .form .input{
     outline: none;
     color: #666;
     padding: 2px;
-width: 100%;}
-@keyframes animation{
-    0%{
-        transform: rotate(0deg);
-    }
-    100%{
-        transform: rotate(360deg);
-    }
+    width: 100%;
 }
-header div.form:hover .submit{
-    animation: animation;
-    
-}
+
+
 header .form .submit{
-    position: absolute;
+    
 
     background-color: #FFF;
     border: 1px solid #000;
@@ -136,6 +127,23 @@ header .form .submit{
     justify-content: center;
     align-items: center;
 }
+@keyframes animation{
+    0%{
+        transform: rotate(-0deg);
+    } 
+    50%{
+        transform: rotate(-120deg);
+    }
+    100%{
+        transform: rotate(-360deg);
+    }
+}
+header div.form:hover .submit i{
+   
+   animation: icon;
+    
+   transform: rotate(-190deg);
+}
 
 header div.top-header p{
     width: 100;
@@ -145,6 +153,7 @@ header div.top-header p{
 
 div.burger-menu{
     text-align: center;
+    margin-bottom: 5px;
     
 }
 
@@ -250,14 +259,50 @@ article div.main-article{
     flex-wrap: wrap;
 }
 
+
+
+.main-footer{
+    
+    color: black;
+    background:white;
+    padding: 3.5%;
+    margin: 0;
+}
+
+.text-copyright {
+    display: block;
+    text-align: center;
+    padding: 3%;
+    font-size: 12px;
+}
+
+
+.row{
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-around;
+}
+footer i{
+    color: #1259c3;
+}
+
+
+
+
+
 @media (min-width: 361px){
     main section article .description{
         display: block;
     }
 
     main section article{
+        color: #000;
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
+    .burger-menu{
+        visibility: hidden;
+    }
+    
 }
 
 
@@ -265,8 +310,19 @@ article div.main-article{
 
 
 @media (min-width: 769px){
+    .top-header{
+        display: flex;
+        flex-wrap: wrap;
+
+    }
     .burger-menu{
-        visibility: hidden;
+        display: block;
+    }
+    div.nav{
+        display: flex;
+        font-size: 12px;
+        justify-content: space-between;
+        align-items: center;
     }
 }
 
@@ -298,5 +354,16 @@ article div.main-article{
         flex-direction: row;
         justify-content: space-between;
         flex-wrap: wrap;
+    }
+}
+@media (min-width : 1026px) {
+    .burger-menu{
+        display: hide;
+    }
+    body{
+        font-family: monospace;
+    }
+    main section article {
+        width: calc(25% - 45px);
     }
 }

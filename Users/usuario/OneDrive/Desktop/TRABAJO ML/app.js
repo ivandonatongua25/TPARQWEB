@@ -6,8 +6,8 @@ app.use(express.static(publicP));
 //app.use(express.static("views"));
 
 
-app.get("/",(req,res)=>{
-    res.sendFile(path.resolve(__dirname,"./views/home.html"));
+app.get("/login",(req,res)=>{
+    res.sendFile(path.resolve(__dirname,"./views/login.html"));
 });
 app.get("/",(req,res)=>{
     res.sendFile(path.resolve(__dirname,"./views/home.html"));
