@@ -138,9 +138,9 @@ header .form .submit{
         transform: rotate(-360deg);
     }
 }
-header div.form:hover .submit i{
+header div .form .submit i:hover{
    
-   animation: icon;
+   animation: animation;
     
    transform: rotate(-190deg);
 }
@@ -280,13 +280,33 @@ article div.main-article{
 .row{
     display: flex;
     box-sizing: border-box;
-    justify-content: space-around;
+    justify-content: center;
 }
 footer i{
     color: #1259c3;
+    margin: auto;
+    margin-bottom: 1em;
 }
 
+ footer h2{
+     margin-bottom: 1em;
+    
 
+ }
+
+.footer-data{
+    display:flex;
+    align-items:center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 30%;
+    padding:2em 4em ;
+  
+    
+}
+
+   
 
 
 
